@@ -1,0 +1,190 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Friend List Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+<body>
+    <div class="container">
+        <h1>Survey Questions</h1>
+        <hr class="my-4">
+        <h2><b>About You</b></h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name (Required)</label>
+                <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="photo">Link to Photo Image (Required)</label>
+                <input type="text" class="form-control" id="photo">
+            </div>
+            <hr class="my-4">
+            <div class="form-group">
+                <h2>Question 1</h2>
+                <label for="sel1">Your mind is always buzzing with unexplored ideas and plans.</label>
+                <select class="form-control" id="sel1">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h2>Question 2</h2>
+                <label for="sel2">Generally speaking, you rely more on your experience than your imagination.</label>
+                <select class="form-control" id="sel2">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h2>Question 3</h2>
+                <label for="sel3">You find it easy to stay relaxed and focused even when there is some pressure.</label>
+                <select class="form-control" id="sel3">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h2>Question 4</h2>
+                <label for="sel4">You rarely do something just out of sheer curiosity.</label>
+                <select class="form-control" id="sel4">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h2>Question 5</h2>
+                <label for="sel5">People can rarely upset you.</label>
+                <select class="form-control" id="sel5">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h2>Question 6</h2>
+                <label for="sel6">It is often difficult for you to relate to other people’s feelings.</label>
+                <select class="form-control" id="sel6">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h2>Question 7</h2>
+                <label for="sel7">In a discussion, truth should be more important than people’s sensitivities.</label>
+                <select class="form-control" id="sel7">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h2>Question 8</h2>
+                <label for="sel8">You rarely get carried away by fantasies and ideas.</label>
+                <select class="form-control" id="sel8">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+                </select>    
+            </div>    
+            <div class="form-group">
+                <h2>Question 9</h2>
+                <label for="sel9">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
+                <select class="form-control" id="sel9">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h2>Question 10</h2>
+                <label for="sel10">You feel more energetic after spending time with a group of people.</label>
+                <select class="form-control" id="sel10">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary btn-block" id="submit" >Submit</button>
+        </form>
+    </div>
+
+    <div class="modal" id="bestModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Your Match</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h1 id='bestPick'></h1>
+              <img src='' id='bestPickPhoto'>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    var currentURL = window.location.origin;
+
+    $("#submit").on("click", function(event){
+        event.preventDefault();
+
+        if($("#name").val().trim() !== "" && $("#photo").val().trim() !== ""){
+            var newUser = {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                scores: [$("#sel1").val(), $("#sel2").val(), $("#sel3").val(), $("#sel4").val(), $("#sel5").val(), $("#sel6").val(), $("#sel7").val(), $("#sel8").val(), $("#sel9").val(), $("#sel10").val()] 
+            }
+            $.post(currentURL + "/api/friends", newUser, function(data){
+                console.log(data);
+                $("#bestPick").text(data.name);
+                $("#bestPickPhoto").attr("src", data.photo);
+                
+                $("#bestModal").modal("toggle");
+            })
+        }
+        else {
+            $("#bestPick").text("Please Fill Out All The Fields");
+            $("#bestModal").modal("toggle");
+        }
+    })
+</script>
